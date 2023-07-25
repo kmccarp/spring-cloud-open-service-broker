@@ -195,7 +195,7 @@ public class Context {
 	 * @param <R> the type of Context
 	 * @param <B> the implementing Builder
 	 */
-	protected static abstract class ContextBaseBuilder<R extends Context, B extends ContextBaseBuilder<R, B>> {
+	protected abstract static class ContextBaseBuilder<R extends Context, B extends ContextBaseBuilder<R, B>> {
 
 		private final B thisObj;
 
