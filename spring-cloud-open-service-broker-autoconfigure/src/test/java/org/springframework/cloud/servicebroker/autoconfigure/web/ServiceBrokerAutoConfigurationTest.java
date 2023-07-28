@@ -47,7 +47,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreCreatedWithMinimalConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(MinimalWithCatalogConfiguration.class)
-				.run((context) -> {
+				.run(context -> {
 					assertThat(context)
 							.getBean(CatalogService.class)
 							.isExactlyInstanceOf(BeanCatalogService.class);
@@ -66,7 +66,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreCreatedWithCatalogAndFullConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(FullServicesWithCatalogConfiguration.class)
-				.run((context) -> {
+				.run(context -> {
 					assertThat(context)
 							.getBean(CatalogService.class)
 							.isExactlyInstanceOf(BeanCatalogService.class);
@@ -85,7 +85,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreCreatedWithFullConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(FullServicesConfiguration.class)
-				.run((context) -> {
+				.run(context -> {
 					assertThat(context)
 							.getBean(CatalogService.class)
 							.isExactlyInstanceOf(TestCatalogService.class);
@@ -104,7 +104,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreCreatedWithCatalogAndCatalogServiceConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(CatalogAndCatalogServiceConfiguration.class)
-				.run((context) -> {
+				.run(context -> {
 					assertThat(context)
 							.getBean(CatalogService.class)
 							.isExactlyInstanceOf(TestCatalogService.class);
@@ -131,7 +131,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreNotCreatedWhenMissingCatalogAndCatalogServiceConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(MissingCatalogServiceConfiguration.class)
-				.run((context) -> {
+				.run(context -> {
 					Throwable t = context.getStartupFailure();
 					assertThat(t).isExactlyInstanceOf(UnsatisfiedDependencyException.class)
 							.hasRootCauseExactlyInstanceOf(CatalogDefinitionDoesNotExistException.class);
@@ -150,7 +150,7 @@ class ServiceBrokerAutoConfigurationTest {
 	void servicesAreNotCreatedWhenMissingAllConfiguration() {
 		this.contextRunner
 				.withUserConfiguration(MissingAllConfiguration.class)
-				.run((context) -> assertThat(context.getStartupFailure())
+				.run(context -> assertThat(context.getStartupFailure())
 						.isExactlyInstanceOf(UnsatisfiedDependencyException.class));
 	}
 
@@ -165,7 +165,7 @@ class ServiceBrokerAutoConfigurationTest {
 						"spring.cloud.openservicebroker.catalog.services[0].plans[0].id=plan-one-id",
 						"spring.cloud.openservicebroker.catalog.services[0].plans[0].name=Plan One",
 						"spring.cloud.openservicebroker.catalog.services[0].plans[0].description=Description for Plan One")
-				.run((context) -> {
+				.run(context -> {
 					assertThat(context).hasSingleBean(Catalog.class);
 					Catalog catalog = context.getBean(Catalog.class);
 					assertThat(catalog.getServiceDefinitions()).hasSize(1);
