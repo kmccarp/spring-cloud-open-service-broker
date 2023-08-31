@@ -40,7 +40,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @ExtendWith(MockitoExtension.class)
 class RequestIdentityInterceptorIntegrationTest {
 
-	private final static String CATALOG_PATH = "/v2/catalog";
+	private static final String CATALOG_PATH = "/v2/catalog";
 
 	@InjectMocks
 	private CatalogController controller;

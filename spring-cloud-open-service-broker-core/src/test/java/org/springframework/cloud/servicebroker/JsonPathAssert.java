@@ -69,13 +69,13 @@ public class JsonPathAssert extends AbstractAssert<JsonPathAssert, DocumentConte
 	}
 
 	public <T> ListAssert<T> hasListAtPath(String path) {
-		TypeRef<List<T>> listTypeRef = new TypeRef<List<T>>() {
+		TypeRef<List<T>> listTypeRef = new TypeRef<>() {
 		};
 		return Assertions.assertThat(actual.read(path, listTypeRef));
 	}
 
 	public <K, V> MapAssert<K, V> hasMapAtPath(String path) {
-		TypeRef<Map<K, V>> mapTypeRef = new TypeRef<Map<K, V>>() {
+		TypeRef<Map<K, V>> mapTypeRef = new TypeRef<>() {
 		};
 		return Assertions.assertThat(actual.read(path, mapTypeRef));
 	}
