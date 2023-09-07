@@ -24,17 +24,17 @@ public class BrokerApiVersion {
 	/**
 	 * API Version header
 	 */
-	public final static String DEFAULT_API_VERSION_HEADER = "X-Broker-Api-Version";
+	public static final String DEFAULT_API_VERSION_HEADER = "X-Broker-Api-Version";
 
 	/**
 	 * API Version value representing any version
 	 */
-	public final static String API_VERSION_ANY = "*";
+	public static final String API_VERSION_ANY = "*";
 
 	/**
 	 * Current API Version supported by this library
 	 */
-	public final static String API_VERSION_CURRENT = "2.16";
+	public static final String API_VERSION_CURRENT = "2.16";
 
 	private final String brokerApiVersionHeader;
 
