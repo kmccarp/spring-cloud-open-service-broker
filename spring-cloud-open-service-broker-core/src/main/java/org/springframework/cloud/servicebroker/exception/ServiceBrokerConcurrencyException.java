@@ -32,7 +32,7 @@ public class ServiceBrokerConcurrencyException extends ServiceBrokerException {
 	/**
 	 * Error code indicating the service broker received concurrent requests to modify a resource
 	 */
-	public final static String CONCURRENCY_ERROR = "ConcurrencyError";
+	public static final String CONCURRENCY_ERROR = "ConcurrencyError";
 
 	/**
 	 * Construct an exception with the provided message.
