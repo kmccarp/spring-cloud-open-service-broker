@@ -43,7 +43,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(MockitoExtension.class)
 class ApiVersionInterceptorIntegrationTest {
 
-	private final static String CATALOG_PATH = "/v2/catalog";
+	private static final String CATALOG_PATH = "/v2/catalog";
 
 	@InjectMocks
 	private CatalogController controller;

@@ -32,7 +32,7 @@ public class ServiceBrokerAsyncRequiredException extends ServiceBrokerException 
 	/**
 	 * Error code representing that asynchronous processing is required by the service broker
 	 */
-	public final static String ASYNC_REQUIRED_ERROR = "AsyncRequired";
+	public static final String ASYNC_REQUIRED_ERROR = "AsyncRequired";
 
 	/**
 	 * Construct an exception with the provided message.
