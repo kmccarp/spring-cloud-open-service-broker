@@ -34,17 +34,17 @@ public class ServiceBrokerRequest {
 	/**
 	 * API Info Location header
 	 */
-	public final static String API_INFO_LOCATION_HEADER = "X-Api-Info-Location";
+	public static final String API_INFO_LOCATION_HEADER = "X-Api-Info-Location";
 
 	/**
 	 * API Originating Identity header
 	 */
-	public final static String ORIGINATING_IDENTITY_HEADER = "X-Broker-API-Originating-Identity";
+	public static final String ORIGINATING_IDENTITY_HEADER = "X-Broker-API-Originating-Identity";
 
 	/**
 	 * API Request Identity header
 	 */
-	public final static String REQUEST_IDENTITY_HEADER = "X-Broker-API-Request-Identity";
+	public static final String REQUEST_IDENTITY_HEADER = "X-Broker-API-Request-Identity";
 
 	/**
 	 * Instance ID path variable name

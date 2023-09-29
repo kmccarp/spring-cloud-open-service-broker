@@ -31,7 +31,7 @@ public abstract class AsyncServiceBrokerRequest extends ServiceBrokerRequest {
 	/**
 	 * Async request parameter key
 	 */
-	public final static String ASYNC_REQUEST_PARAMETER = "accepts_incomplete";
+	public static final String ASYNC_REQUEST_PARAMETER = "accepts_incomplete";
 
 	@JsonIgnore //accepts_incomplete Osb field passed as query param in most subclasses
 	protected transient boolean asyncAccepted;
