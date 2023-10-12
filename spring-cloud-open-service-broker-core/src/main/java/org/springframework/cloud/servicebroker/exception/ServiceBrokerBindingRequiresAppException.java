@@ -33,7 +33,7 @@ public class ServiceBrokerBindingRequiresAppException extends ServiceBrokerExcep
 	/**
 	 * Error code representing that the service broker received a binding request without an application resource
 	 */
-	public final static String APP_REQUIRED_ERROR = "RequiresApp";
+	public static final String APP_REQUIRED_ERROR = "RequiresApp";
 
 	/**
 	 * Construct an exception with the provided message.

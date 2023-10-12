@@ -35,13 +35,13 @@ import org.springframework.cloud.servicebroker.model.ServiceBrokerRequest;
  */
 public class GetServiceInstanceBindingRequest extends ServiceBrokerRequest {
 
-	private transient final String serviceInstanceId;
+	private final transient String serviceInstanceId;
 
-	private transient final String bindingId;
+	private final transient String bindingId;
 
-	private transient final String serviceDefinitionId;
+	private final transient String serviceDefinitionId;
 
-	private transient final String planId;
+	private final transient String planId;
 
 	/**
 	 * Construct a new {@link GetServiceInstanceBindingRequest}
